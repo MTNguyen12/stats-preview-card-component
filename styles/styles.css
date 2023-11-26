@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(233, 47%, 7%);
+}
+
+h1 {
+  margin: 8px 0 16px;
+  font-size: 1.7em;
+  line-height: 1.2em;
+  letter-spacing: 0.5px;
+  font-family: "Inter", sans-serif;
+  color: hsl(0, 0%, 100%);
+}
+
+span {
+  color: hsl(277, 64%, 61%);
+}
+
+.center {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: hsl(244, 38%, 16%);
+  text-align: center;
+  width: 328px;
+  height: 780px;
+}
+
+/* main text section  */
+
+.card-text {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 32px;
+  width: 85%;
+  height: 100%;
+}
+
+.main-paragraph {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  line-height: 1.75em;
+  letter-spacing: 0.8px;
+  font-family: "Inter", sans-serif;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+/* stats section  */
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 8px;
+  height: 100%;
+}
+
+.stat-number {
+  margin-bottom: 4px;
+  font-size: 1.5em;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+
+.stat-heading {
+  font-size: 0.75em;
+  letter-spacing: 1.2px;
+  font-family: "Lexend Deca", sans-serif;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+/* mobile header */
+
+.header-container-mobile {
+  position: relative;
+  height: 240px;
+}
+
+.header-mobile {
+  width: 100%;
+  height: 240px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  background-color: hsl(277, 64%, 61%);
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+}
+
+.header-desktop {
+  height: 100%;
+}
+
+/* media query for mobile */
+
+@media screen and (max-width: 600px) {
+  .header-container-desktop {
+    display: none;
+  }
+}
+
+/* media query for non-mobile  */
+
+@media screen and (min-width: 601px) {
+  .card {
+    flex-direction: row;
+    width: 1400px;
+    height: 540px;
+  }
+
+  .card-text {
+    width: 50%;
+    text-align: left;
+  }      
+
+  .text-container, .stats-container {
+    margin-left: 100px;
+  }
+
+  .main-paragraph, .stats-container {
+    margin-right: 190px;
+  }
+
+  h1 {
+    margin: auto 100px 30px 0;
+    font-size: 2.6em;
+  }
+
+  .main-paragraph {
+    font-size: 1em;
+  }
+
+  .stats-container {
+    flex-direction: row;
+    align-items: bottom;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .stat-number {
+    font-size: 1.6em;
+  }
+
+  .stat-heading {
+    letter-spacing: 1.5px;
+    font-size: 0.85em;
+  }
+   
+  /* desktop header */
+
+  .header-container-mobile {
+    display: none;
+  }
+
+  .header-container-desktop {
+    position: relative;
+    width: 50%;
+  }
+
+  .header-desktop {
+    width: 100%;
+    height: 100%;
+  }
+}
